@@ -1,0 +1,282 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-tcf-blue: var(--tcf-blue);
+  --color-tcf-blue-light: var(--tcf-blue-light);
+  --color-tcf-teal: var(--tcf-teal);
+  --color-tcf-surface: var(--tcf-surface);
+}
+
+/* ============================================
+   LIGHT THEME - TCF Premium Corporate
+   ============================================ */
+:root {
+  /* Brand Colors */
+  --tcf-blue: oklch(0.47 0.22 255);
+  --tcf-blue-light: oklch(0.93 0.06 255);
+  --tcf-teal: oklch(0.60 0.18 195);
+  --tcf-surface: oklch(0.975 0.004 255);
+
+  /* Primary - Deep Blue */
+  --primary: oklch(0.47 0.22 255);
+  --primary-foreground: oklch(1 0 0);
+
+  /* Radius */
+  --radius: 0.625rem;
+
+  /* Base */
+  --background: oklch(0.975 0.004 255);
+  --foreground: oklch(0.18 0.025 255);
+
+  /* Cards */
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.18 0.025 255);
+
+  /* Popover */
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.18 0.025 255);
+
+  /* Secondary */
+  --secondary: oklch(0.94 0.012 255);
+  --secondary-foreground: oklch(0.30 0.025 255);
+
+  /* Muted */
+  --muted: oklch(0.94 0.008 255);
+  --muted-foreground: oklch(0.52 0.02 255);
+
+  /* Accent - Teal */
+  --accent: oklch(0.60 0.18 195);
+  --accent-foreground: oklch(1 0 0);
+
+  /* Destructive */
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.985 0 0);
+
+  /* Border & Input */
+  --border: oklch(0.88 0.012 255);
+  --input: oklch(0.94 0.008 255);
+  --ring: oklch(0.47 0.22 255);
+
+  /* Charts */
+  --chart-1: oklch(0.47 0.22 255);
+  --chart-2: oklch(0.60 0.18 195);
+  --chart-3: oklch(0.65 0.18 160);
+  --chart-4: oklch(0.70 0.18 130);
+  --chart-5: oklch(0.55 0.20 280);
+
+  /* Sidebar */
+  --sidebar: oklch(0.16 0.04 255);
+  --sidebar-foreground: oklch(0.92 0.008 255);
+  --sidebar-primary: oklch(0.60 0.18 195);
+  --sidebar-primary-foreground: oklch(1 0 0);
+  --sidebar-accent: oklch(0.25 0.04 255);
+  --sidebar-accent-foreground: oklch(0.92 0.008 255);
+  --sidebar-border: oklch(1 0 0 / 10%);
+  --sidebar-ring: oklch(0.60 0.18 195);
+
+  /* Fonts */
+  --font-sans: 'Plus Jakarta Sans', 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+/* ============================================
+   DARK THEME - TCF Premium Corporate Dark
+   ============================================ */
+.dark {
+  --tcf-blue: oklch(0.60 0.20 255);
+  --tcf-blue-light: oklch(0.25 0.06 255);
+  --tcf-teal: oklch(0.65 0.18 195);
+  --tcf-surface: oklch(0.17 0.025 255);
+
+  --primary: oklch(0.60 0.20 255);
+  --primary-foreground: oklch(0.10 0.02 255);
+
+  --background: oklch(0.13 0.025 255);
+  --foreground: oklch(0.92 0.008 255);
+
+  --card: oklch(0.17 0.025 255);
+  --card-foreground: oklch(0.92 0.008 255);
+
+  --popover: oklch(0.17 0.025 255);
+  --popover-foreground: oklch(0.92 0.008 255);
+
+  --secondary: oklch(0.22 0.03 255);
+  --secondary-foreground: oklch(0.80 0.010 255);
+
+  --muted: oklch(0.22 0.025 255);
+  --muted-foreground: oklch(0.60 0.015 255);
+
+  --accent: oklch(0.65 0.18 195);
+  --accent-foreground: oklch(0.10 0.02 255);
+
+  --destructive: oklch(0.704 0.191 22.216);
+  --destructive-foreground: oklch(0.985 0 0);
+
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 8%);
+  --ring: oklch(0.60 0.20 255);
+
+  --chart-1: oklch(0.60 0.20 255);
+  --chart-2: oklch(0.65 0.18 195);
+  --chart-3: oklch(0.65 0.18 160);
+  --chart-4: oklch(0.70 0.18 130);
+  --chart-5: oklch(0.60 0.20 280);
+
+  --sidebar: oklch(0.10 0.025 255);
+  --sidebar-foreground: oklch(0.92 0.008 255);
+  --sidebar-primary: oklch(0.65 0.18 195);
+  --sidebar-primary-foreground: oklch(0.10 0.02 255);
+  --sidebar-accent: oklch(0.18 0.03 255);
+  --sidebar-accent-foreground: oklch(0.92 0.008 255);
+  --sidebar-border: oklch(1 0 0 / 8%);
+  --sidebar-ring: oklch(0.65 0.18 195);
+}
+
+/* ============================================
+   BASE STYLES
+   ============================================ */
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
+    @apply font-semibold tracking-tight;
+  }
+
+  h1 { @apply text-3xl font-bold; }
+  h2 { @apply text-2xl font-semibold; }
+  h3 { @apply text-xl font-semibold; }
+
+  code {
+    font-family: 'JetBrains Mono', monospace;
+    @apply text-sm;
+  }
+
+  button:not(:disabled),
+  [role="button"]:not([aria-disabled="true"]),
+  [type="button"]:not(:disabled),
+  [type="submit"]:not(:disabled),
+  [type="reset"]:not(:disabled),
+  a[href],
+  select:not(:disabled),
+  input[type="checkbox"]:not(:disabled),
+  input[type="radio"]:not(:disabled) {
+    @apply cursor-pointer;
+  }
+}
+
+/* ============================================
+   COMPONENT STYLES
+   ============================================ */
+@layer components {
+  .container {
+    @apply mx-auto w-full px-4 sm:px-6 lg:px-8;
+    max-width: 1400px;
+  }
+
+  /* Premium Card */
+  .card-premium {
+    @apply bg-card border border-border rounded-xl shadow-sm hover:shadow-md transition-all duration-200;
+  }
+
+  /* Gradient Text */
+  .gradient-text {
+    background: linear-gradient(135deg, oklch(0.47 0.22 255), oklch(0.60 0.18 195));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Sidebar Nav Item */
+  .nav-item {
+    @apply flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-all duration-150;
+    @apply text-sidebar-foreground/70 hover:text-sidebar-foreground hover:bg-sidebar-accent;
+  }
+
+  .nav-item.active {
+    @apply bg-sidebar-accent text-sidebar-foreground;
+  }
+
+  /* Status Badge */
+  .badge-priority-high {
+    @apply bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-400;
+  }
+  .badge-priority-medium {
+    @apply bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-400;
+  }
+  .badge-priority-low {
+    @apply bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-400;
+  }
+
+  /* AI Suggestion Chip */
+  .ai-chip {
+    @apply inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium cursor-pointer;
+    @apply bg-primary/10 text-primary hover:bg-primary/20 transition-colors border border-primary/20;
+  }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    @apply bg-transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply bg-border rounded-full;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-muted-foreground/40;
+  }
+}
